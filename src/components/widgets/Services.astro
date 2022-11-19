@@ -1,0 +1,94 @@
+---
+import setNuts from '../../assets/images/services/set-nuts.png';
+import desktop from '../../assets/images/services/desktop.png';
+import dataBase from '../../assets/images/services/database.png';
+import cloudArrowDown from '../../assets/images/services/cloud-arrow-down.png';
+import usb from '../../assets/images/services/usb.png';
+import satellite from '../../assets/images/services/satellite.png';
+
+const services = [
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: setNuts,
+  },
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: desktop,
+  },
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: dataBase,
+  },
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: cloudArrowDown,
+  },
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: usb,
+  },
+  {
+    title: 'MANAGED SERVICES',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    img: satellite,
+  },
+];
+---
+
+<section class="container background-color-dark">
+  <div class="row flex-column width-section">
+    <div class="row center-xs">
+      <h1 class="title-font color-white">WHAT WE PROVIDE</h1>
+    </div>
+    <div class="row center-xs">
+      <hr class="rounded-color-primary-a" />
+    </div>
+    <div class="row center-xs" style="margin-bottom: 50px; padding: 0 30px;">
+      <p class="body-font color-white">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incidºidunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="row center-xs">
+      {
+        services.map(({ title, description, img }) => (
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="row flex-column card-service-style">
+              <div class="row center-xs">
+                <picture>
+                  <img src={img} alt="set-nuts" width="137" height="107" />
+                </picture>
+              </div>
+              <div class="row center-xs">
+                <hr class="dashed" />
+              </div>
+              <div class="row center-xs margin-service-card">
+                <h3 class="title-font color-white">{title}</h3>
+              </div>
+              <div class="row center-xs">
+                <p class="body-font color-white">{description}</p>
+              </div>
+              <div
+                class="row center-xs margin-service-card"
+                style="cursor: pointer;"
+              >
+                <h4 class="title-font color-primary-a">LEARN MORE</h4>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

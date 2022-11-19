@@ -1,0 +1,97 @@
+---
+import '../../assets/styles/contactUs.scss';
+---
+
+<section class="container background-color-section">
+  <div class="row center-xs width-section wrap-section">
+    <div class="contact-information">
+      <div class="row flex-column" style="width: 75%;">
+        <div class="row">
+          <h1 class="title-font color-white">Contact Us</h1>
+        </div>
+        <div class="row">
+          <hr class="rounded-white" />
+        </div>
+        <div class="row" style="margin-top: 35px;">
+          <p class="body-font color-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incidºidunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="row flex-column">
+        <div class="row" style="margin-bottom: 20px;">
+          <h1 class="title-font">GET IN TOUCH</h1>
+        </div>
+        <div class="row">
+          <form id="contact-form" method="POST">
+            <!-- <div class="email-container">
+              <input type="text" required />
+              <label class="lbl-nombre">
+                <span class="text-nomb title-font">Email</span>
+              </label>              
+            </div> -->
+            <div class="contact-email-container">
+              <input id="email" type="text" required />
+              <label>EMAIL</label>
+            </div>
+
+            <div class="row" style="margin-bottom: 40px;">
+              <textarea
+                id="message"
+                name=""
+                id=""
+                cols="10"
+                rows="7"
+                class="contact-textarea"
+                placeholder="MESSAGE"
+                required></textarea>
+            </div>
+
+            <div class="row button-submit-container">
+              <button class="btn-primary-a title-font" type="submit">
+                SUBMIT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <script>
+  document
+    .getElementById('contact-form')
+    .addEventListener('submit', submitForm);
+
+  // Send Email Info
+  function sendEmail(email: string, message: string) {
+    Email.send({
+      Host: 'smtp.elasticemail.com',
+      Username: 'javier.sosa@falcode.dev',
+      Password: 'Falcod3',
+      To: 'javier.sosa@falcode.dev',
+      From: `${email}`,
+      Subject: `You have a new message`,
+      Body: `${message}`,
+    }).then((message) => alert('Mail sent successfully!'));
+  }
+
+  function submitForm(e: any) {
+    e.preventDefault();
+
+    //   Get input Values
+    let email = (<HTMLInputElement>document.getElementById('email')).value;
+    let message = (<HTMLInputElement>document.getElementById('message')).value;
+
+    // (<HTMLFormElement>document.querySelector('.contact-form')).reset();
+
+    (<HTMLInputElement>document.getElementById('email')).value = '';
+    (<HTMLInputElement>document.getElementById('message')).value = '';
+
+    sendEmail(email, message);
+  }
+</script> -->

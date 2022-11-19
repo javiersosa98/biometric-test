@@ -1,0 +1,107 @@
+---
+import Picture from "../core/Picture.astro";
+
+import imageTest from "../../assets/images/rectangle_22.png";
+---
+
+<section class="container background-color-section">
+  <div class="row flex-column width-section">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <!-- <Picture
+          src="../../assets/images/rectangle_22.png"
+          alt="image_1"
+          width="100px"
+          height="100px"
+        /> -->
+        <div class="row end-xs center-image-mobile">
+          <picture>
+            <!-- <source media="(min-width: 1280px)" srcset="/assets/images/isaac-newton-l.jpg">
+          <source media="(max-width: 520px)" srcset="/assets/images/isaac-newton-s.jpg"> -->
+            <img src={imageTest} alt="image_1" width="300" height="300" />
+          </picture>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <h3 class="title-font color-primary-a" style="margin-bottom: 10px;">
+          ABOUT US
+        </h3>
+        <h1 class="title-font" style="margin-bottom: 10px;">
+          REDEFINING ENTERPRISE COMMUNICATRIONS
+        </h1>
+        <p class="body-font">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incidºidunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+
+        <div class="row center-xs">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="row center-xs">
+              <button class="btn-primary-b title-font">LEARN MORE</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="row center-xs">
+              <button class="btn-primary-a title-font">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row column-reverse-card-information">
+      <div class="col-md-6 col-xs-12">
+        <h3
+          class="text-align-end title-font color-primary-a"
+          style="margin-bottom: 10px;"
+        >
+          ABOUT US
+        </h3>
+        <h1 class="text-align-end title-font" style="margin-bottom: 10px;">
+          REDEFINING ENTERPRISE COMMUNICATRIONS
+        </h1>
+        <p class="text-align-end body-font">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incidºidunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12 justify-content-end">
+            <div class="row center-xs">
+              <button class="btn-primary-c title-font">LEARN MORE</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 justify-content-end">
+            <div class="row center-xs">
+              <button class="btn-primary-a title-font">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <!-- <Picture
+          src="../../assets/images/rectangle_22.png"
+          alt="image_2"
+          width="100px"
+          height="100px"
+        /> -->
+        <div class="row center-image-mobile">
+          <picture>
+            <!-- <source media="(min-width: 1280px)" srcset="/assets/images/isaac-newton-l.jpg">
+          <source media="(max-width: 520px)" srcset="/assets/images/isaac-newton-s.jpg"> -->
+            <img src={imageTest} alt="image_2" width="300" height="300" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

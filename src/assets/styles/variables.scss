@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Krophed';
+  src: url("../fonts/Krophed.otf") format('opentype');
+};
+
+@font-face {
+  font-family: 'Nexa Light';
+  src: url("../fonts/Nexa_Light.otf") format('opentype');
+};
+
+/*==================== SECTION STYLES ====================*/
+$color-white: #ffffff;
+
+/*==================== PRIMARY ====================*/
+$color-primary-a: #5A9E97;
+$color-primary-b: #210067;
+$color-primary-c: #585857;
+$color-semi-transparent: rgba(255, 255, 255, 0.26);
+$color-primary-a-hover: darken($color-primary-a, 20%);
+$color-primary-b-hover: lighten($color-primary-b, 10%);
+$color-primary-c-hover: darken($color-primary-c, 20%);
+$color-semi-transparent-hover: darken($color-semi-transparent, 20%);
+
+/*==================== BACKGROUND ====================*/
+$color-section-background: #DBDBDB;
+$color-section-background-dark: darken($color-primary-c, 25%);
+
+/*==================== FONTS ====================*/
+$title-font: 'Krophed', sans-serif;
+$body-font: 'Nexa Light', sans-serif;
+
+/*==================== BREAKPOINT DEVICES ====================*/
+$breakpoint-mobile: 672px;
+$breakpoint-tablet: 990px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1296px;

@@ -1,0 +1,9 @@
+---
+const { src, alt, width, height } = Astro.props;
+---
+
+<picture>
+  <!-- <source media="(min-width: 1280px)" srcset="/assets/images/isaac-newton-l.jpg">
+  <source media="(max-width: 520px)" srcset="/assets/images/isaac-newton-s.jpg"> -->
+  <img src={src} alt={alt} style={`width:${width}; height:${height}`} />
+</picture>

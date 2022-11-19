@@ -1,0 +1,32 @@
+---
+import biometricSecurityLogo from '../../assets/images/biometric_security_logo.png';
+---
+
+<header class="background-color-section">
+  <div class="curved">
+    <img
+      class="biometric-logo"
+      src={biometricSecurityLogo}
+      alt="Biometric Security Logo"
+    />
+  </div>
+</header>
+
+<style>
+  .curved {
+    position: relative;
+    background: #210067;
+    height: 300px;
+    width: 100%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+  }
+
+  .biometric-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+  }
+</style>

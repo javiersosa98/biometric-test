@@ -1,0 +1,206 @@
+@import "variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*==================== COLOR STYLES ====================*/
+
+.color-white {
+  color: $color-white;
+}
+
+.color-primary-a {
+  color: $color-primary-a;
+}
+
+.background-color-dark {
+  background-color: $color-section-background-dark;
+}
+
+.background-color-section {
+  background-color: $color-section-background;
+}
+
+/*==================== SECTION STYLES ====================*/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+}
+
+.width-section {
+  max-width: 1440px;
+}
+
+.text-align-end {
+  text-align: end;
+}
+
+.justify-content-end {
+  display: flex;
+  justify-content: end;
+}
+
+.title-font {
+  font-family: $title-font;
+}
+
+.body-font {
+  font-family: $body-font;
+}
+
+/*==================== DIVIDER STYLES ====================*/
+
+hr.rounded {
+  border-radius: 10px;
+  width: 80px;
+  margin: 20px 0;
+}
+
+hr.rounded-color-primary-a {
+  @extend .rounded;
+  border: 3px solid $color-primary-a;
+}
+
+hr.rounded-white {
+  @extend .rounded;
+  border: 3px solid $color-white;
+}
+
+hr.dashed {
+  border: 1.5px dashed $color-primary-a;
+  border-radius: 10px;
+  width: 140px;
+  margin: 20px 0;
+}
+
+/*==================== CARD STYLES ====================*/
+
+.card-service-style {
+  background-color: $color-primary-c-hover;
+  padding: 30px;
+  border: 1px solid $color-white;
+}
+
+.margin-service-card {
+  margin: 20px 0;
+}
+
+/*==================== BUTTON STYLES ====================*/
+
+.btn {
+  align-items: center;
+  // background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  // color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 210px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover,
+.btn:focus {
+  color: $color-white;
+}
+
+.btn-primary-a {
+  @extend .btn;
+  background-color: $color-primary-a;
+  color: #000000;
+}
+
+.btn-primary-a:hover,
+.btn-primary-a:focus {
+  background-color: $color-primary-a-hover;
+  // color: #ffffff;
+}
+
+.btn-primary-b {
+  @extend .btn;
+  background-color: $color-primary-b;
+  color: $color-white;
+}
+
+.btn-primary-b:hover,
+.btn-primary-b:focus {
+  background-color: $color-primary-b-hover;
+  // color: #ffffff;
+}
+
+.btn-primary-c {
+  @extend .btn;
+  background-color: $color-primary-c;
+  color: $color-white;
+}
+
+.btn-primary-c:hover,
+.btn-primary-c:focus {
+  background-color: $color-primary-c-hover;
+  // color: #ffffff;
+}
+
+.btn-semi-transparent {
+  @extend .btn;
+  background: $color-semi-transparent;
+  color: $color-white;
+  border: 2px solid $color-white;
+}
+
+.btn-semi-transparent:hover,
+.btn-semi-transparent:focus {
+  background: $color-semi-transparent-hover;
+  // color: $color-white;
+}
+
+/*=========================================================*/
+
+/*==================== MEDIA QUERIES ====================*/
+
+.column-reverse-card-information {
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+  }
+}
+
+.center-image-mobile.row {
+  img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    // display: flex;
+    justify-content: center;
+  }
+}

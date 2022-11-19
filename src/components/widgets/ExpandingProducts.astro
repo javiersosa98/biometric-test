@@ -1,0 +1,194 @@
+---
+import inEar from '../../assets/images/in_ear_background.png';
+import smartWatch from '../../assets/images/smart_watch_background.png';
+import arrowRight from '../../assets/images/arrow_right.png';
+import arrowLeft from '../../assets/images/arrow_left.png';
+import '../../assets/styles/expandingProducts.scss';
+---
+
+<section class="container background-color-section">
+  <div class="row flex-column width-section">
+    <div class="row center-xs" style="gap: 2px;">
+      <div class="panel" id="panel-0">
+        <div class="row">
+          <div class="col-xs-12 panel-0-columns">
+            <div class="row center-xs">
+              <h1 class="title-font color-white title-margin-bottom">
+                PUSH IT
+              </h1>
+            </div>
+            <div class="row">
+              <p class="body-font color-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incidºidunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-xs-12 panel-0-columns position-product-right"
+            id="product-0"
+          >
+            <picture>
+              <img
+                src={inEar}
+                alt="in_ear_img"
+                class="initial-size-product"
+                id="image-0"
+              />
+            </picture>
+          </div>
+          <div class="row center-xs position-button" id="button-0">
+            <button class="btn-semi-transparent title-font">MORE ABOUT</button>
+          </div>
+        </div>
+        <div class="row center-xs arrow-container hide-arrow" id="arrow-0">
+          <picture>
+            <img src={arrowRight} alt="arrow_right" />
+          </picture>
+        </div>
+      </div>
+      <div class="panel" id="panel-1">
+        <div class="row reverse">
+          <div class="col-xs-12 panel-1-columns">
+            <div class="row center-xs">
+              <h1 class="title-font color-white title-margin-bottom">
+                PUSH IT
+              </h1>
+            </div>
+            <div class="row">
+              <p class="body-font color-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incidºidunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-xs-12 panel-1-columns position-product-left"
+            id="product-1"
+          >
+            <!-- <div class="row center-xs"> -->
+            <picture>
+              <!-- <source media="(min-width: 1280px)" srcset="/assets/images/isaac-newton-l.jpg">
+          <source media="(max-width: 520px)" srcset="/assets/images/isaac-newton-s.jpg"> -->
+              <img
+                src={smartWatch}
+                alt="smart_watch_img"
+                class="initial-size-product"
+                id="image-1"
+              />
+            </picture>
+            <!-- </div> -->
+          </div>
+          <div class="row center-xs position-button" id="button-1">
+            <button class="btn-semi-transparent title-font">MORE ABOUT</button>
+          </div>
+        </div>
+        <div class="row center-xs arrow-container hide-arrow" id="arrow-1">
+          <picture>
+            <img src={arrowLeft} alt="arrow_left" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let buttons = document.querySelectorAll('.btn-semi-transparent');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', () => toggleAccordionEffect(i));
+  }
+
+  let arrows = document.querySelectorAll('.arrow-container');
+  for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener('click', () => toggleAccordionEffect(i));
+  }
+
+  //   let productContainers = document.querySelector('.position-product') as HTMLElement;
+  //     for (let i = 0; i < productContainers.length; i++) {
+  //       productContainers[i].style.backgroundColor = 'salmon';
+
+  //     productContainers.forEach((productContainer) => {
+  //     productContainer.addEventListener('click', () => {
+  //       productContainer.style.left = '0';
+  //     });
+  //   });
+  // panels.forEach((panel) => {
+  //   panel.addEventListener('click', () => {
+  //     removeActiveClasses();
+  //     panel.classList.toggle('active');
+  //   });
+  // });
+
+  // function removeActiveClasses() {
+  //   panels.forEach((panel) => {
+  //     panel.classList.remove('active');
+  //   });
+  // }
+
+  function toggleAccordionEffect(id: any) {
+    let panel0 = document.getElementById('panel-0');
+    let panel1 = document.getElementById('panel-1');
+    let arrow0 = document.getElementById('arrow-0');
+    let arrow1 = document.getElementById('arrow-1');
+    let image0 = document.getElementById('image-0');
+    let image1 = document.getElementById('image-1');
+
+    let columnsSecondCard = document.querySelectorAll('.panel-1-columns');
+    let columnsFirstCard = document.querySelectorAll('.panel-0-columns');
+
+    let productFirstCard = document.getElementById('product-0');
+    let productSecondCard = document.getElementById('product-1');
+
+    if (id === 0) {
+      image0.classList.remove('accordion-size-product');
+      image1.classList.add('accordion-size-product');
+      columnsSecondCard.forEach((column) => {
+        column.classList.add('col-xs-12');
+        column.classList.remove('col-xs-6');
+      });
+      columnsFirstCard.forEach((column) => {
+        column.classList.add('col-xs-6');
+        column.classList.remove('col-xs-12');
+      });
+      panel0.classList.add('active');
+      panel1.classList.remove('active');
+      arrow0.classList.add('hide-arrow');
+      arrow1.classList.remove('hide-arrow');
+      productFirstCard.style.right = '20%';
+      productSecondCard.style.left = '50%';
+    } else {
+      image0.classList.add('accordion-size-product');
+      image1.classList.remove('accordion-size-product');
+      columnsFirstCard.forEach((column) => {
+        column.classList.add('col-xs-12');
+        column.classList.remove('col-xs-6');
+      });
+      columnsSecondCard.forEach((column) => {
+        column.classList.add('col-xs-6');
+        column.classList.remove('col-xs-12');
+      });
+      panel1.classList.add('active');
+      panel0.classList.remove('active');
+      arrow0.classList.remove('hide-arrow');
+      arrow1.classList.add('hide-arrow');
+      productFirstCard.style.right = '50%';
+      productSecondCard.style.left = '20%';
+    }
+
+    // let cols = document.querySelectorAll('.panel-1-col');
+    // cols.forEach((col) => {
+    //   col.classList.remove('col-xs-12');
+    //   col.classList.add('col-xs-6');
+    // });
+
+    // for (let i = 0; i < productContainers.length; i++) {
+    //   productContainers[i].style.left = "0px";
+    // }
+    // productFirstCard.style.right = '20%';
+    // productSecondCard.style.left = '20%';
+
+    document.getElementById('button-0').classList.add('hide-button');
+    document.getElementById('button-1').classList.add('hide-button');
+  }
+</script>

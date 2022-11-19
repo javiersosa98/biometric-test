@@ -1,0 +1,73 @@
+---
+import { Icon } from 'astro-icon';
+import '../../assets/styles/footer.scss';
+---
+
+<footer class="container background-color-dark">
+  <div class="row flex-column">
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-3 col-md-3 item">
+        <div class="row center-xs">
+          <h3>Services</h3>
+        </div>
+        <div class="row center-xs">
+          <ul>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3 item">
+        <div class="row center-xs">
+          <h3>About</h3>
+        </div>
+        <div class="row center-xs">
+          <ul>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Legacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3 item">
+        <div class="row center-xs">
+          <h3>Careers</h3>
+        </div>
+        <div class="row center-xs">
+          <ul>
+            <li><a href="#">Job openings</a></li>
+            <li><a href="#">Employee success</a></li>
+            <li><a href="#">Benefits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 item social">
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <!-- Extracts the names for astro-icon from https://icones.js.org/ -->
+            <div class="row center-xs">
+              <a href="#"
+                ><Icon name="ri:linkedin-fill" class="footer-icon" />
+              </a>
+              <a href="#"
+                ><Icon name="ri:facebook-fill" class="footer-icon" />
+              </a>
+              <a href="#"
+                ><Icon name="ri:twitter-fill" class="footer-icon" />
+              </a>
+              <a href="#"
+                ><Icon name="ri:instagram-fill" class="footer-icon" />
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row center-xs">
+              <p class="copyright">Company Name © 2018</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
