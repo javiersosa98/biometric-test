@@ -13,8 +13,6 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/biometric_security_logo.png" />
     <meta name="generator" content={Astro.generator} />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
     <title>{title}</title>
   </head>
   <body>
@@ -40,7 +38,7 @@ const { title } = Astro.props;
     </style>
 
     <!--==================== SEND EMAIL SERVICE ====================-->
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--==================== MAIN JS ====================-->
     <script src="../components/widgets/main.js"></script>
   </body>
