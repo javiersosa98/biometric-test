@@ -3,7 +3,7 @@ document.getElementById('contact-form').addEventListener('submit', submitForm);
 // Send Email Info
 function sendEmail(email, message) {
   console.log(typeof window.Email);
-  window.Email.send({
+  Email.send({
     Host: 'smtp.gmail.com',
     Username: 'jcarlos.sosagomez@gmail.com',
     Password: 'pkctvjpnsqoskvat',
